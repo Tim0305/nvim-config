@@ -9,3 +9,10 @@ C:Users/AppData/Local/nvim
 
 -Linux:
 ~/.config/nvim
+
+HomeBrew
+https://brew.sh/
+
+WSL
+Win32Yank (Chocolatey)
+choco install win32yank
