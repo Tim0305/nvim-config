@@ -36,4 +36,4 @@ https://brew.sh/
 
 ## WSL
 Win32Yank (Chocolatey)
-choco install win32yank
+`choco install win32yank`
