@@ -1,13 +1,13 @@
 return {
   {
     -- Cmp-nvim-Lsp. Autocompletion with the lsp
-    "hrsh7th/cmp-nvim-lsp"
+    "hrsh7th/cmp-nvim-lsp",
   },
   {
     -- Lua Snip plugin
     "L3MON4D3/LuaSnip",
     dependencies = {
-      "saadparwaiz1/cmp_luasnip", -- Completion engine
+      "saadparwaiz1/cmp_luasnip",  -- Completion engine
       "rafamadriz/friendly-snippets", -- Snippets from vscode
     },
   },
@@ -42,6 +42,8 @@ return {
           { name = "luasnip" }, -- For luasnip users.
         }, {
           { name = "buffer" },
+        }, {
+          { name = "render-markdown" },
         }),
       })
     end,
