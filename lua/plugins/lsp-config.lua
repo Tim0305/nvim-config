@@ -1,4 +1,4 @@
-local lspServers = { "lua_ls", "eslint", "css_variables", "cssls", "cssmodules_ls", "html", "ts_ls" }
+local lspServers = { "lua_ls", "eslint", "css_variables", "cssls", "cssmodules_ls", "html", "ts_ls", "clangd" }
 
 return {
   {
