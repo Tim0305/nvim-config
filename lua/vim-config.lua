@@ -8,8 +8,14 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+
 -- Usar la misma memoria del s.o
-vim.cmd("set clipboard=unnamed")
+
+-- Windows
+-- vim.cmd("set clipboard=unnamed")
+
+-- Linux
+vim.cmd("set clipboard=unnamedplus")
 
 -- Terminal por defecto
 if vim.fn.has("win32") == 1 then
