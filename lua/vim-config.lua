@@ -9,7 +9,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
 
--- Usar la misma memoria del s.o
+-- Usar la misma memoria del clipboard del s.o
 
 -- Windows
 -- vim.cmd("set clipboard=unnamed")
