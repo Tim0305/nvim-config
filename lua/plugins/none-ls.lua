@@ -2,6 +2,9 @@
 --https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md
 --https://github.com/nvimtools/none-ls-extras.nvim
 
+-- Mason Null ls (Another plugin)
+-- https://github.com/jay-babu/mason-null-ls.nvim
+
 return {
 	"nvimtools/none-ls.nvim",
 	-- add the extras dependencies
@@ -17,6 +20,7 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.rubocop,
 				null_ls.builtins.formatting.clang_format,
+				null_ls.builtins.formatting.black,
 
 				-- linters
 				-- Use require("none-ls.METHOD.TOOL") instead of null_ls.builtins.METHOD.TOOL to use these extras.
