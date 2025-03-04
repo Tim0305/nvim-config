@@ -55,23 +55,34 @@ return {
   --   end,
   -- },
   -- {
-  --   "rebelot/kanagawa.nvim",
-  --   config = function()
-  --     vim.cmd("colorscheme kanagawa")
-  --   end,
+  -- 	"rebelot/kanagawa.nvim",
+  -- 	config = function()
+  -- 		vim.cmd("colorscheme kanagawa-dragon")
+  -- 		-- themes: wave, dragon, lotus
+  -- 	end,
+  -- },
+  -- {
+  -- 	"folke/tokyonight.nvim",
+  -- 	lazy = false,
+  -- 	priority = 1000,
+  -- 	opts = {},
+  -- 	config = function()
+  -- 		-- " There are also colorschemes for the different styles.
+  -- 		-- colorscheme tokyonight-night
+  -- 		-- colorscheme tokyonight-storm
+  -- 		-- colorscheme tokyonight-day
+  -- 		-- colorscheme tokyonight-moon
+  -- 		vim.cmd("colorscheme tokyonight-night")
+  -- 	end,
   -- },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    "navarasu/onedark.nvim",
     config = function()
-      -- " There are also colorschemes for the different styles.
-      -- colorscheme tokyonight-night
-      -- colorscheme tokyonight-storm
-      -- colorscheme tokyonight-day
-      -- colorscheme tokyonight-moon
-      vim.cmd("colorscheme tokyonight-night")
+      require("onedark").setup({
+        -- Theme style
+        style = "darker",
+      })
+      require("onedark").load()
     end,
   },
 }
