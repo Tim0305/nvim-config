@@ -1,3 +1,6 @@
+-- LSP servers and clients communicate which features they support through "capabilities".
+--  By default, Neovim supports a subset of the LSP specification.
+--  With blink.cmp, Neovim has _more_ capabilities which are communicated to the LSP servers.
 local lspServers =
 	{ "lua_ls", "eslint", "css_variables", "cssls", "cssmodules_ls", "html", "ts_ls", "clangd", "pyright" }
 
@@ -18,8 +21,10 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" }, -- Enable this when using blink cmp
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			-- local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Use this when using cmp_nvim
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local lspconfig = require("lspconfig")
 
 			-- Debemos agregar .cmd al ejecutable del LSP para que funcione en windows, y no nos arroje el error que no se encuentre instalado o no esta en el PATH
@@ -52,7 +57,7 @@ return {
 			-- Iterar sobre la lista de servidores LSP y configurar cada uno
 			for _, lspServer in ipairs(lspServers) do
 				lspconfig[lspServer].setup({
-					on_attach = on_attach,
+					-- on_attach = on_attach,
 					capabilities = capabilities,
 				})
 			end
