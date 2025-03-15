@@ -18,10 +18,10 @@ return {
       vim.keymap.set("n", "cb", ":GitConflictChooseBoth<CR>")
       vim.keymap.set("n", "c0", ":GitConflictChooseNone<CR>")
       --  Move to the next conflict.
-      vim.keymap.set("n", "nx", ":GitConflictNextConflict<CR>normal! zz", { noremap = true, silent = true })
+      vim.keymap.set("n", "xn", ":GitConflictNextConflict<CR>normal! zz", { noremap = true, silent = true })
 
       -- Move to the previous conflict.
-      vim.keymap.set("n", "px", ":GitConflictPrevConflict<CR>normal! zz", { noremap = true, silent = true })
+      vim.keymap.set("n", "xp", ":GitConflictPrevConflict<CR>normal! zz", { noremap = true, silent = true })
 
       -- Get all conflict to quickfix
       vim.keymap.set("n", "qx", ":GitConflictListQf<CR>", { noremap = true, silent = true })
