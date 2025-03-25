@@ -21,7 +21,20 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "saghen/blink.cmp" }, -- Enable this when using blink cmp
+		dependencies = {
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+				opts = {
+					library = {
+						-- See the configuration section for more details
+						-- Load luvit types when the `vim.uv` word is found
+						{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+					},
+				},
+			},
+			{ "saghen/blink.cmp" }, -- Enable this when using blink cmp
+		},
 		config = function()
 			-- local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Use this when using cmp_nvim
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
