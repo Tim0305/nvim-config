@@ -8,7 +8,6 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
-
 -- Usar la misma memoria del clipboard del s.o
 
 -- Windows
@@ -27,3 +26,11 @@ if vim.fn.has("win32") == 1 then
 		vim.opt.shell = "pwsh.exe"
 	end
 end
+
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+	end,
+})
