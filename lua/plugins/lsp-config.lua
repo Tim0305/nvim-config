@@ -1,8 +1,17 @@
 -- LSP servers and clients communicate which features they support through "capabilities".
 --  By default, Neovim supports a subset of the LSP specification.
 --  With blink.cmp, Neovim has _more_ capabilities which are communicated to the LSP servers.
-local lspServers =
-	{ "lua_ls", "eslint", "css_variables", "cssls", "cssmodules_ls", "html", "ts_ls", "clangd", "pyright" }
+local lspServers = {
+	"lua_ls",
+	"eslint",
+	"css_variables",
+	"cssls",
+	"cssmodules_ls",
+	"html",
+	"ts_ls",
+	"clangd",
+	"pyright",
+}
 
 return {
 	{
