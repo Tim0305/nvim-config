@@ -3,6 +3,7 @@ return {
 		"ray-x/lsp_signature.nvim",
 		event = "InsertEnter",
 		opts = {
+			hint_prefix = "",
 			bind = true,
 			handler_opts = {
 				border = "rounded",
