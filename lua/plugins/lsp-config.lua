@@ -11,6 +11,7 @@ local lspServers = {
 	"ts_ls",
 	"clangd",
 	"pyright",
+	"jdtls",
 }
 
 return {
