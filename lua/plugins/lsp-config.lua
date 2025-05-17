@@ -85,6 +85,16 @@ return {
 				})
 			end
 
+			-- ccls LSP (LSP for C/C++)
+			-- sudo apt install ccls
+			-- brew install ccls
+			-- https://github.com/MaskRay/ccls
+			-- lspconfig.ccls.setup({
+			-- 	-- on_attach = on_attach,
+			-- 	capabilities = capabilities,
+			-- 	root_dir = lspconfig.util.root_pattern("platformio.ini", ".ccls", "compile_commands.json"),
+			-- })
+
 			-- Keybindings
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
